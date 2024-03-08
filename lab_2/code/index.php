@@ -290,3 +290,17 @@ if (count($arr) == 3) {
     $sum = array_sum($arr);
     echo "<br>Сумма эл-тов: $sum";
 }
+//task #19
+
+//3angle x
+function TriangleX(): void //x xx xxx xxx etc.
+{
+    $str = 'x';
+    $num = 20;
+    $arr = [];
+    for ($i = 1; $i <= $num; $i++) {
+        $arr[$i] = str_repeat($str, $i);
+        echo "<br>" . $arr[$i];
+    }
+}
+TriangleX();
