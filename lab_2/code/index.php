@@ -304,3 +304,30 @@ function TriangleX(): void //x xx xxx xxx etc.
     }
 }
 TriangleX();
+
+// task #20
+
+// avg no cycle
+$arr = [12, 23, 34, 45, 56];
+$avg = array_sum($arr) / count($arr);
+echo "<br>Среднее арифметическое: $avg";
+
+//sum 1-100 no cycle
+$number = 100;
+$sum = ($number * ($number + 1)) / 2;
+echo "<br>Сумма чисел: $sum";
+
+//default -> sqrt no cycle
+$arr = [4, 9, 16, 25, 36, 49, 64, 81];
+$res = array_map('sqrt', $arr);
+echo "<br>Массив с корнями: ";
+foreach($res as $value) echo "$value ";
+
+//combine no cycle
+$ar = array_combine(range('a', 'z'), range(1, 26));
+echo "<br>Буква-номер: ";
+foreach ($ar as $letter => $num) echo "<br>$letter - $num";;
+
+// sum of pairs no cycle
+$string = '1234567890';
+echo "<br>Сумма пар: " . array_sum(str_split($string, 2));
