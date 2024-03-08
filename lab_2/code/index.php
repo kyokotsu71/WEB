@@ -104,17 +104,17 @@ foreach ($AbsArray as $value) echo " $value";
 
 $divNumber = 40; // general
 $divArr = [];
-for($i = 1; $i <= $divNumber; $i++)
-    if($divNumber % $i == 0)
+for ($i = 1; $i <= $divNumber; $i++)
+    if ($divNumber % $i == 0)
         $divArr[] = $i;
 echo "<br>" . 'Делители числа ' . $divNumber . ': ';
-foreach($divArr as $value) echo "$value ";
+foreach ($divArr as $value) echo "$value ";
 echo "<br>";
 
 $sum10Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $sumOfDigits = 0;
 $count = 0;
-while($sumOfDigits <= 10) {
+while ($sumOfDigits <= 10) {
     $sumOfDigits += $sum10Arr[$count];
     $count += 1;
 }
@@ -122,10 +122,61 @@ echo "Нужно сложить $count первых элементов";
 
 // task #15
 
-function printStringReturnNumber(): int
+function printStringReturnNumber(): int // function 1
 {
     echo "<br>Moa";
     return 7355608;
 }
+
 $my_num = printStringReturnNumber();
 echo "<br>$my_num";
+
+// task #16
+function increaseEnthusiasm(string $string): string // function 2
+{
+    return $string . '!';
+}
+
+echo "<br>";
+echo increaseEnthusiasm('Пока пишем - думаем');
+
+function repeatThreeTimes(string $string): string // function 3
+{
+    return str_repeat($string, 3);
+}
+
+echo "<br>";
+echo repeatThreeTimes('Ласково называем спектр');
+
+echo "<br>" . increaseEnthusiasm(repeatThreeTimes("Резонанса нет"));
+
+function cut(string $string, int $num = 10): string // function 4
+{
+    return mb_strcut($string, 0, $num, 'utf-8');
+}
+
+function StringRecursion(array $mas): void  // function 5
+{
+    if (count($mas) > 0) {
+        echo $mas[0] . " ";
+        array_shift($mas);
+        StringRecursion($mas);
+    }
+}
+
+echo "<br>Массив с помощью рекурсии: ";
+StringRecursion($numArray);
+
+
+// function 6
+function SumOfDigits(int $num): int
+{
+
+    $digitsSum =  array_sum(str_split($num));
+    if ($digitsSum > 9) {
+        return SumOfDigits($digitsSum);
+    }
+    return $digitsSum;
+}
+
+echo "<br>" . SumOfDigits(24681012);
