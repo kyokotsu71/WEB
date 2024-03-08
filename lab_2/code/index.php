@@ -120,4 +120,12 @@ while($sumOfDigits <= 10) {
 }
 echo "Нужно сложить $count первых элементов";
 
+// task #15
 
+function printStringReturnNumber(): int
+{
+    echo "<br>Moa";
+    return 7355608;
+}
+$my_num = printStringReturnNumber();
+echo "<br>$my_num";
