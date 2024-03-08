@@ -10,3 +10,24 @@ $order .= ', 1 double hemberger AND one XL coke plz'; // concatenation
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name."; // output
+
+// task #2
+$num = 1738; //int
+echo "<br>"; // == "\n"
+echo $num;
+
+echo "<br>"; // "\n"
+
+$num_but_float = 13.337; // float
+echo $num_but_float;
+
+echo "<br>";
+echo $num_but_float - 1.337; // print twelve
+
+echo "<br>";
+$last_month = 1178.23; // difference
+$this_month = 1089.98;
+echo "Разница в расходах: ".$last_month - $this_month;
+
+
+
