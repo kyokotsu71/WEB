@@ -39,3 +39,5 @@ $days_per_language = $days / $num_languages; //avg days to 1 lang
 
 echo $days_per_language; // print
 
+// task #12
+echo "<br>" . 8 ** 2; //8^2
