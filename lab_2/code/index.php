@@ -29,4 +29,12 @@ $last_month = 1187.23; // difference
 $this_month = 1089.98;
 echo "Разница в расходах: ".$last_month - $this_month . "<br>";
 
+// task #11
+$num_languages = 4; //vars
+$months = 11;
 
+$days = $months * 16; //actual days
+
+$days_per_language = $days / $num_languages; //avg days to 1 lang
+
+echo $days_per_language; // print
