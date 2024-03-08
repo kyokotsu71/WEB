@@ -41,3 +41,14 @@ echo $days_per_language; // print
 
 // task #12
 echo "<br>" . 8 ** 2; //8^2
+
+//task #13
+$my_num = 1337; // my_num
+$answer = $my_num; // answer
+$answer += 2; // +2
+$answer *= 2; // *2
+$answer -= 2; // -2
+$answer /= 2; // /2
+$answer -= $my_num; //-my_num
+
+echo "<br>" . $answer; //print 1
