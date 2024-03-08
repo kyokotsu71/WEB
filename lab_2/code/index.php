@@ -180,3 +180,64 @@ function SumOfDigits(int $num): int
 }
 
 echo "<br>" . SumOfDigits(24681012);
+
+// task #17
+
+function x(string $str, int $num): array //x xx xxx xxx etc.
+{
+    $arr = [];
+    for ($i = 1; $i <= $num; $i++) {
+        $arr[$i] = str_repeat($str, $i);
+    }
+    return $arr;
+}
+echo "<br>";
+foreach (x("x", 5) as $value) echo "$value ";
+
+function arrayFill(string $str, int $num): array // 'x', 'x', 'x' etc.
+{
+    return str_split(str_repeat($str, $num), strlen($str));
+}
+echo "<br>";
+foreach (arrayFill("x", 10) as $value) echo "$value ";
+
+$DoubleArray = [[1, 2, 3], [4, 5], [6]]; //sum 2d array
+function SumOfDigits2(array $arr): int
+{
+    $sum = 0;
+    foreach ($arr as $subArray) {
+        foreach ($subArray as $value) {
+            $sum += $value;
+        }
+    }
+    return $sum;
+}
+echo "<br>Сумма чисел в двумерном массиве: " . SumOfDigits2($DoubleArray);
+
+$new2dArr = [];
+$Count = 1;
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        $newArr[$i][$j] = $Count++;
+    }
+}
+// 1*2 + 3*4
+$Array = [2, 5, 3, 9];
+$result = $Array[0] * $Array[1] + $Array[2] * $Array[3];
+echo "<br>Итоговое значение: " . $result;
+
+//user
+$user = ["name" => "Протасевич", "surname" => "Михаил", "patronymic" => "Николаевич"];
+echo "<br>";
+echo $user["name"] . ' ' . $user["surname"] . ' ' . $user["patronymic"] . ' ';
+
+//date
+$date = ["year" => "2023", "month" => "March", "day" => "7"];
+echo "<br>";
+echo $date["year"] . ' ' . $date["month"] . ' ' . $date["day"] . ' ';
+
+//quantity of elements, last, last-1
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo "<br>Количество элементов: " . count($arr);
+echo "<br>Последний элемент: " . end($arr);
+echo "<br>Предпоследний: " . prev($arr);
