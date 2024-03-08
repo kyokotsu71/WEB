@@ -25,9 +25,8 @@ echo "<br>";
 echo $num_but_float - 1.337; // print twelve
 
 echo "<br>";
-$last_month = 1178.23; // difference
+$last_month = 1187.23; // difference
 $this_month = 1089.98;
-echo "Разница в расходах: ".$last_month - $this_month;
-
+echo "Разница в расходах: ".$last_month - $this_month . "<br>";
 
 
