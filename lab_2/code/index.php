@@ -241,3 +241,52 @@ $arr = ['a', 'b', 'c', 'd', 'e'];
 echo "<br>Количество элементов: " . count($arr);
 echo "<br>Последний элемент: " . end($arr);
 echo "<br>Предпоследний: " . prev($arr);
+echo "<br>";
+// task #18
+
+//>10
+function bigSum(int $a, int $b): bool
+{
+    if ($a + $b > 10)
+    {
+        return True;
+    }
+    else return False;
+}
+
+// ==
+function Equ(int $a, int $b): bool
+{
+    if ($a == $b)
+    {
+        return True;
+    }
+    else return False;
+}
+
+//short form
+$test = 0;
+if ($test == 0) echo 'Верно';
+
+//age
+$age = 15;
+if ($age < 10 || $age > 99)
+{
+    echo "<br>Возраст <10 или >99. Лего Вам не собрать. ";
+}
+else
+{
+    $sum = array_sum(str_split($age));
+    if ($sum <= 9)
+    {
+        echo "<br>Сумма цифр однозначна. ";
+    }
+    else echo "<br>Сумма цифр двузначна. ";
+}
+
+//3 elements
+$arr = [-100, 34, 69];
+if (count($arr) == 3) {
+    $sum = array_sum($arr);
+    echo "<br>Сумма эл-тов: $sum";
+}
