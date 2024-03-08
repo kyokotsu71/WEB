@@ -38,3 +38,4 @@ $days = $months * 16; //actual days
 $days_per_language = $days / $num_languages; //avg days to 1 lang
 
 echo $days_per_language; // print
+
