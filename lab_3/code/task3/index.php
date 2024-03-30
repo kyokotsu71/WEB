@@ -8,6 +8,7 @@
     <title>Avito Tyagi</title>
 </head>
 <body>
+<div id="form">
 <form action="save.php" method="post">
     <label for="email">email</label>
     <input type="email" name="email" required>
@@ -28,5 +29,31 @@
 
     <input type="submit" value="save">
 </form>
+</div>
+<div id="table">
+    <table>
+        <thead>
+        <th>Email</th>
+        <th>category</th>
+        <th>Title</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+            <?php
+            $files = glob("categories/*/*.txt");
+            foreach ($files as $file) {
+                $data = file($file);
+                $category = basename(dirname($file));
+                $title = basename($file, ".txt");
+                $email = $data[0];
+                $desc = $data[1];
+                echo "<tr>
+                    <td>$email</td><td>$category</td>
+                    <td>$title</td><td>$desc</td>
+                    </tr>";
+            }?>
+            </tbody>
+    </table>
+</div>
 </body>
 </html>
