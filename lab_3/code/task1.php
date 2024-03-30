@@ -1,22 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Avito Tyagi</title>
-</head>
-<body>
-    <form action="save.php" method="post">
-        <label for="email">email</label>
-        <input type="email" name="email" required>
+<?php
+//task 1 a
+$form = '/a..b/';
+$str = 'ahb acb aeb aeeb adcb axeb';
+$passed = [];
+preg_match_all($form, $str,$passed);
+echo "Found: <br />";
+foreach ($passed[0] as $p) {
+    echo $p, "<br />";
+}
 
-        <label for="email">category</label>
-        <select name="category">
-            <option>tyagi</option>
-            <option>other</option>
-        </select>
-    </form>
-</body>
-</html>
+//task 1 b
+$str = 'a1b2c3';
+$form = '/\d/';
+preg_match_all($form, $str, $passed);
+foreach ($passed[0] as $p) {
+    $str = str_replace($p, pow($p, 3), $str);
+}
+echo $str . "<br />";
