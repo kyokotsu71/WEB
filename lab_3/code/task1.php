@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -12,21 +12,11 @@
         <label for="email">email</label>
         <input type="email" name="email" required>
 
-        <label for="category">category</label>
-        <select name="category" required> <?php
-            $categories = array_filter(glob("./categories/*"), 'is_dir');
-            foreach ($categories as $cat) {
-                $name = basename($cat);
-                echo "<option value=\"$name\">$name</option>";
-            }?>
+        <label for="email">category</label>
+        <select name="category">
+            <option>tyagi</option>
+            <option>other</option>
         </select>
-        <label for="title">title</label>
-        <input type="text" name="title" required>
-
-        <label for="description">description</label>
-        <textarea rows="4" name="description"></textarea>
-
-        <input type="submit" value="save">
     </form>
 </body>
 </html>
