@@ -1,5 +1,7 @@
 {
     "name": "user/code",
     "type": "project",
-    "require": {}
+    "require": {
+        "google/apiclient": "^2.16"
+    }
 }
